@@ -43,6 +43,7 @@ fun ToDoScreen() {
                 modifier = Modifier.weight(1f)
             )
 
+            // Add Button
             Button(
                 onClick = {
                     if (taskText.isNotBlank()) {
@@ -53,6 +54,16 @@ fun ToDoScreen() {
                 modifier = Modifier.padding(start = 8.dp)
             ) {
                 Text("Add")
+            }
+
+            // Clear All Button (Deletes all tasks)
+            Button(
+                onClick = {
+                    tasks = listOf()  // Clear the task list
+                },
+                modifier = Modifier.padding(start = 8.dp)
+            ) {
+                Text("Clear All")
             }
         }
 
